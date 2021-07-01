@@ -1,4 +1,3 @@
-
 "代码转换
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1 
 set fenc=utf8
@@ -39,6 +38,11 @@ Plug 'ctrlpvim/ctrlp.vim' " 搜索插件
 Plug 'preservim/nerdcommenter' " 注释插件
 Plug 'Yggdroot/indentLine' " 缩进提示
 call plug#end()
+" nerdtree
+let NERDTreeMinimalUI=1 " 不显示顶层?号  
+autocmd vimenter * NERDTree " 自动打开
+"打开vim时如果没有文件自动打开NERDTree
+autocmd vimenter * if !argc()|NERDTree|endif
 " 文件类型设置 
 filetype on "检测文件类型
 filetype indent on "针对不同的文件采用不同的缩进方式
